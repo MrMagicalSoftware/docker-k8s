@@ -77,10 +77,9 @@ kubectl run <nome-del-pod> --image=<nome-dell-immagine> [opzioni]
 A partire dalle versioni più recenti di Kubernetes, l'uso di `kubectl run` per creare applicazioni complesse è stato deprecato in favore di manifesti YAML e comandi come `kubectl apply`. È consigliabile utilizzare i file di configurazione per gestire le risorse in modo più strutturato e ripetibile.
 
 
-
-```bash
+```
 kubectl run nginx --image=nginx:1.27.0
-```bash
+```
 
 
 ![Screenshot 2025-04-16 alle 20 30 20](https://github.com/user-attachments/assets/a4489b1b-2ce4-4b64-9aa9-60fd1710b179)
