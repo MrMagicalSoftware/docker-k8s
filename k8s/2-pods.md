@@ -178,6 +178,20 @@ In questo esempio:
 ![Screenshot 2025-04-16 alle 21 19 21](https://github.com/user-attachments/assets/426ebec6-be28-401b-aac4-558ca9903823)
 
 ![Screenshot 2025-04-16 alle 21 19 40](https://github.com/user-attachments/assets/90544c23-4914-43b4-b80b-f4a6770f48b6)
+![Screenshot 2025-04-16 alle 21 21 14](https://github.com/user-attachments/assets/40b5dfae-6bc4-4496-ac78-3dc39609e5a2)
+
+![Screenshot 2025-04-16 alle 21 21 34](https://github.com/user-attachments/assets/12f3ae53-3a5a-4375-bdf0-c68d4e4426f1)
+![Screenshot 2025-04-16 alle 21 22 16](https://github.com/user-attachments/assets/3a72983c-2061-4875-a3f9-7baf2814325d)
+
+
+![Screenshot 2025-04-16 alle 21 23 04](https://github.com/user-attachments/assets/e132b54b-fedc-4cf0-a36a-230fde431cab)
+![Screenshot 2025-04-16 alle 21 23 43](https://github.com/user-attachments/assets/23a2a9ab-02eb-4184-b858-e366c6b0e3fc)
+![Screenshot 2025-04-16 alle 21 24 42](https://github.com/user-attachments/assets/4309318d-82c6-43fb-a56b-c8aa63572157)
+
+![Screenshot 2025-04-16 alle 21 25 11](https://github.com/user-attachments/assets/ab4d1d7b-ebd8-4631-a557-4d76716977fe)
+
+
+
 
 
 
