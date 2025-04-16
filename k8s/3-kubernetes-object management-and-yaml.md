@@ -240,7 +240,7 @@ Dopo aver applicato i manifest file, puoi visualizzare le risorse create utilizz
 
 
 
-
+4- Hands -on
 
 
 
