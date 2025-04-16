@@ -92,6 +92,37 @@ kubectl run nginx --image=nginx:1.27.0
 
 ![Screenshot 2025-04-16 alle 20 51 41](https://github.com/user-attachments/assets/71d70938-b9dd-4311-9aac-62f53afe7330)
 
- 
+ ![Screenshot 2025-04-16 alle 20 55 14](https://github.com/user-attachments/assets/685b07ca-177a-4458-ad48-a8cc0302cc78)
+
+
+
+![Screenshot 2025-04-16 alle 20 56 17](https://github.com/user-attachments/assets/e67622f4-123f-4073-94f4-ac631c654683)
+
+
+![Screenshot 2025-04-16 alle 20 56 37](https://github.com/user-attachments/assets/e16a89a9-56b6-41f1-9cdf-cce90362690e)
+
+![Screenshot 2025-04-16 alle 20 58 08](https://github.com/user-attachments/assets/4cd9e37e-50d1-4f72-a3f9-5d179ab8d6b5)
+
+
+![Screenshot 2025-04-16 alle 20 58 43](https://github.com/user-attachments/assets/53359aa8-976c-4e1f-9b83-9528d651d428)
+
+  
+![Screenshot 2025-04-16 alle 20 59 17](https://github.com/user-attachments/assets/a901ab99-437d-4b73-a8da-00901d984594)
+
+![Screenshot 2025-04-16 alle 21 00 03](https://github.com/user-attachments/assets/01506b3a-2ef6-41cf-80d4-733aa284b5e4)
+
+![Screenshot 2025-04-16 alle 21 00 23](https://github.com/user-attachments/assets/ac594c70-0826-4101-b22f-55022441d0a7)
+
+
+
+
+
+
+
+
+
+
+
+
 
 
