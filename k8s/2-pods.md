@@ -86,8 +86,11 @@ kubectl run nginx --image=nginx:1.27.0
 
 ![Screenshot 2025-04-16 alle 20 30 40](https://github.com/user-attachments/assets/4e8393e9-920d-4b7b-8dbd-d0a48998ddc9)
 
+![Screenshot 2025-04-16 alle 20 48 44](https://github.com/user-attachments/assets/4f335f14-6ba1-4972-a86a-0aecff6d1ff2)
 
+![Screenshot 2025-04-16 alle 20 49 25](https://github.com/user-attachments/assets/d2fe4e15-e6ae-452b-8262-5834056130a7)
 
+![Screenshot 2025-04-16 alle 20 51 41](https://github.com/user-attachments/assets/71d70938-b9dd-4311-9aac-62f53afe7330)
 
  
 
