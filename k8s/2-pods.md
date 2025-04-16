@@ -115,12 +115,69 @@ kubectl run nginx --image=nginx:1.27.0
 
 
 
+_________________________________________________________________________
 
 
 
+```
+kubectl get pods
+```
+
+```
+kubectl expose pods --help
+```
+
+
+```
+kubectl expose pods
+```
+`kubectl expose` è un comando di Kubernetes utilizzato per creare un servizio (Service) che espone una risorsa, come un pod, un deployment o un replicaset, all'interno del cluster o all'esterno di esso. Quando si espone un pod, si crea un endpoint che consente ad altri servizi o a client esterni di comunicare con il pod.
+
+### Sintassi di base
+
+La sintassi generale per esporre un pod è la seguente:
+
+```bash
+kubectl expose pod <nome-del-pod> --port=<porta-esposta> --target-port=<porta-del-pod> --type=<tipo-di-servizio>
+```
+
+### Parametri principali
+
+- `<nome-del-pod>`: il nome del pod che si desidera esporre.
+- `--port`: la porta su cui il servizio sarà accessibile.
+- `--target-port`: la porta sul pod a cui il servizio deve inoltrare il traffico. Se non specificato, di default è la stessa della porta esposta.
+- `--type`: il tipo di servizio da creare. Può essere `ClusterIP` (default), `NodePort`, `LoadBalancer`, ecc.
+
+### Esempio
+
+Supponiamo di avere un pod chiamato `my-pod` che ascolta sulla porta `8080`. Per esporre questo pod, puoi utilizzare il seguente comando:
+
+```bash
+kubectl expose pod my-pod --port=80 --target-port=8080 --type=NodePort
+```
+
+In questo esempio:
+
+- Il servizio sarà accessibile sulla porta `80`.
+- Il traffico in entrata sulla porta `80` sarà inoltrato alla porta `8080` del pod `my-pod`.
+- Il tipo di servizio è `NodePort`, il che significa che sarà accessibile anche all'esterno del cluster attraverso una porta assegnata su ogni nodo.
+
+- È importante notare che esporre direttamente i pod non è sempre la pratica migliore, poiché i pod possono essere temporanei e soggetti a riavvii. È spesso preferibile esporre un deployment o un replicaset.
+- Assicurati di avere i permessi necessari per eseguire il comando e che il tuo contesto Kubernetes sia configurato correttamente.
+
+![Screenshot 2025-04-16 alle 21 06 11](https://github.com/user-attachments/assets/c0a079f1-2ee9-4b5e-9749-611eda6ae1ac)
+![Screenshot 2025-04-16 alle 21 06 41](https://github.com/user-attachments/assets/1a962c82-71f4-4150-866b-69e422c2c94f)
+![Screenshot 2025-04-16 alle 21 08 30](https://github.com/user-attachments/assets/169f6b33-e48d-432d-a0e4-f8a3c1f5e5d4)
+![Screenshot 2025-04-16 alle 21 12 08](https://github.com/user-attachments/assets/9c4e9981-7a25-4c2a-abb6-22c07361a39f)
 
 
 
+# Da codice Dockerfile a pods
+
+
+![Screenshot 2025-04-16 alle 21 19 21](https://github.com/user-attachments/assets/426ebec6-be28-401b-aac4-558ca9903823)
+
+![Screenshot 2025-04-16 alle 21 19 40](https://github.com/user-attachments/assets/90544c23-4914-43b4-b80b-f4a6770f48b6)
 
 
 
