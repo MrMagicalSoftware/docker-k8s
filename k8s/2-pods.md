@@ -191,7 +191,123 @@ In questo esempio:
 ![Screenshot 2025-04-16 alle 21 25 11](https://github.com/user-attachments/assets/ab4d1d7b-ebd8-4631-a557-4d76716977fe)
 
 
+___________
 
+passare da un progetto Dockerfile a pod in Kubernetes
+
+### 1. Creare un Dockerfile
+
+Dockerfile pronto per il tuo progetto. Ecco un esempio di un semplice Dockerfile per un'applicazione Node.js:
+
+```dockerfile
+# Usa un'immagine base
+FROM node:14
+
+# Imposta la directory di lavoro
+WORKDIR /usr/src/app
+
+# Copia i file package.json e package-lock.json
+COPY package*.json ./
+
+# Installa le dipendenze
+RUN npm install
+
+# Copia il resto dell'applicazione
+COPY . .
+
+# Espone la porta su cui l'app ascolta
+EXPOSE 3000
+
+# Comando per avviare l'app
+CMD ["node", "app.js"]
+```
+
+### 2. Costruire l'immagine Docker
+
+Costruisci l'immagine Docker utilizzando il comando `docker build`. Assicurati di eseguire questo comando nella directory in cui si trova il tuo Dockerfile.
+
+```bash
+docker build -t nome-immagine:tag .
+```
+
+### 3. Eseguire l'immagine Docker (opzionale)
+
+Puoi testare l'immagine localmente eseguendola con Docker:
+
+```bash
+docker run -p 3000:3000 nome-immagine:tag
+```
+
+### 4. Pubblicare l'immagine su un registry
+
+Per utilizzare l'immagine in Kubernetes, devi pubblicarla su un registry Docker (come Docker Hub, Google Container Registry, o un registry privato). Ecco come farlo su Docker Hub:
+
+1. Accedi al tuo account Docker Hub:
+
+   ```bash
+   docker login
+   ```
+
+2. Tagga l'immagine:
+
+   ```bash
+   docker tag nome-immagine:tag tuo-username/nome-immagine:tag
+   ```
+
+3. Pubblica l'immagine:
+
+   ```bash
+   docker push tuo-username/nome-immagine:tag
+   ```
+
+### 5. Creare un file di configurazione per il pod
+
+Crea un file YAML per definire il pod. Ecco un esempio di file `pod.yaml`:
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nome-del-pod
+spec:
+  containers:
+  - name: nome-del-container
+    image: tuo-username/nome-immagine:tag
+    ports:
+    - containerPort: 3000
+```
+
+### 6. Creare il pod in Kubernetes
+
+Usa il comando `kubectl` per creare il pod:
+
+```bash
+kubectl apply -f pod.yaml
+```
+
+### 7. Verificare il pod
+
+Controlla lo stato del pod per assicurarti che sia in esecuzione:
+
+```bash
+kubectl get pods
+```
+
+### 8. Esporre il pod (opzionale)
+
+Se desideri rendere il tuo pod accessibile dall'esterno del cluster, puoi esporlo creando un servizio:
+
+```bash
+kubectl expose pod nome-del-pod --type=NodePort --port=3000 --target-port=3000
+```
+
+### 9. Accedere all'applicazione
+
+Se hai esposto il pod come `NodePort`, puoi accedere all'applicazione utilizzando l'indirizzo IP di uno dei nodi del cluster e la porta assegnata.
+
+
+
+_____________
 
 
 
