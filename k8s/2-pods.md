@@ -7,3 +7,89 @@
 <img width="706" alt="Screenshot 2025-04-16 alle 19 16 15" src="https://github.com/user-attachments/assets/e0cebd52-e931-41c9-995d-758fafffe1dd" />
 <img width="1439" alt="Screenshot 2025-04-16 alle 19 25 17" src="https://github.com/user-attachments/assets/22ad1d42-fc6a-45f9-8fa5-80fa109d5084" />
 <img width="1428" alt="Screenshot 2025-04-16 alle 19 28 26" src="https://github.com/user-attachments/assets/ffbb573c-cc66-489c-91a7-98ab75aa3f61" />
+
+
+___________________
+
+
+
+![Screenshot 2025-04-16 alle 20 25 22](https://github.com/user-attachments/assets/d10f64f6-4705-459a-8ef9-fe7aca1ef4e7)
+![Screenshot 2025-04-16 alle 20 26 27](https://github.com/user-attachments/assets/11f60f1c-69b1-491b-8fee-3144b07d9fc5)
+
+
+```
+kubectl run --help
+```
+
+
+
+`kubectl run` è un comando utilizzato nella CLI di Kubernetes per creare e avviare un nuovo pod. Questo comando è spesso utilizzato per eseguire rapidamente un container in un cluster Kubernetes. Ecco una spiegazione più dettagliata delle sue funzionalità e opzioni:
+
+### Funzionalità di `kubectl run`
+
+1. **Creazione di un Pod**: `kubectl run` crea un nuovo pod che esegue un container specificato. Puoi specificare l'immagine del container che desideri utilizzare.
+
+2. **Esecuzione Interattiva**: Puoi eseguire un container in modo interattivo, ad esempio per eseguire comandi di debug o testare un'applicazione.
+
+3. **Specifiche del Container**: Puoi specificare vari parametri per il container, come le variabili d'ambiente, le porte da esporre e le risorse richieste.
+
+### Sintassi di Base
+
+La sintassi di base per il comando è:
+
+```bash
+kubectl run <nome-del-pod> --image=<nome-dell-immagine> [opzioni]
+```
+
+### Esempi
+
+1. **Eseguire un Pod con un'immagine**:
+
+   ```bash
+   kubectl run my-pod --image=nginx
+   ```
+
+   Questo comando crea un pod chiamato `my-pod` che esegue un container basato sull'immagine `nginx`.
+
+2. **Eseguire un Pod in modo interattivo**:
+
+   ```bash
+   kubectl run my-shell --image=ubuntu --stdin --tty -- /bin/bash
+   ```
+
+   Questo comando crea un pod chiamato `my-shell` che esegue un container Ubuntu e apre una shell interattiva.
+
+3. **Specificare variabili d'ambiente**:
+
+   ```bash
+   kubectl run my-app --image=my-image --env="ENV_VAR=value"
+   ```
+
+   Questo comando crea un pod con una variabile d'ambiente chiamata `ENV_VAR`.
+
+### Opzioni Comuni
+
+- `--env`: Specifica le variabili d'ambiente per il container.
+- `--port`: Espone una porta specifica del container.
+- `--restart`: Specifica la politica di riavvio (ad esempio, `Never` o `OnFailure`).
+- `--stdin` e `--tty`: Utilizzati per eseguire un container in modo interattivo.
+
+A partire dalle versioni più recenti di Kubernetes, l'uso di `kubectl run` per creare applicazioni complesse è stato deprecato in favore di manifesti YAML e comandi come `kubectl apply`. È consigliabile utilizzare i file di configurazione per gestire le risorse in modo più strutturato e ripetibile.
+
+
+
+```bash
+kubectl run nginx --image=nginx:1.27.0
+```bash
+
+
+![Screenshot 2025-04-16 alle 20 30 20](https://github.com/user-attachments/assets/a4489b1b-2ce4-4b64-9aa9-60fd1710b179)
+
+![Screenshot 2025-04-16 alle 20 30 40](https://github.com/user-attachments/assets/4e8393e9-920d-4b7b-8dbd-d0a48998ddc9)
+
+
+
+
+ 
+
+
