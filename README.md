@@ -21,3 +21,4 @@ docker -v
 docker version
 
 ```
+![Screenshot 2025-04-17 alle 12 08 35](https://github.com/user-attachments/assets/7d190c10-6c35-43e9-b212-4d21b41d1f67)
