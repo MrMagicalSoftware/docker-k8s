@@ -50,5 +50,18 @@ Inoltre, ci sono altre opzioni che puoi utilizzare con `docker ps`, come:
 - `--filter`: Filtra i risultati in base a criteri specifici.
 
 
+# Variabili d'ambiente 
+
+
+Le Environment Variables (variabili d'ambiente) in Docker sono utilizzate per configurare il comportamento dei container al momento della loro esecuzione. Queste variabili possono essere utilizzate per passare informazioni al container, come configurazioni, credenziali, percorsi di file e altre impostazioni necessarie per l'applicazione in esecuzione all'interno del container.
+
+
+
+
+
+
+
+
+
 
 
