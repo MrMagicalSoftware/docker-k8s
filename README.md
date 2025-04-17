@@ -22,3 +22,33 @@ docker version
 
 ```
 ![Screenshot 2025-04-17 alle 12 08 35](https://github.com/user-attachments/assets/7d190c10-6c35-43e9-b212-4d21b41d1f67)
+
+
+```
+docker ps
+```
+
+Il comando `docker ps` è utilizzato per visualizzare i container Docker attualmente in esecuzione sul sistema. Quando esegui questo comando, ottieni un elenco dei container attivi, insieme a informazioni utili su ciascuno di essi. Ecco alcune delle informazioni che puoi vedere:
+
+- **CONTAINER ID**: L'identificatore univoco del container.
+- **IMAGE**: L'immagine Docker da cui è stato creato il container.
+- **COMMAND**: Il comando che è stato eseguito all'interno del container.
+- **CREATED**: Quando è stato creato il container.
+- **STATUS**: Lo stato attuale del container (ad esempio, "up" se è in esecuzione).
+- **PORTS**: Le porte esposte e il loro mapping tra il container e l'host.
+- **NAMES**: Il nome assegnato al container.
+
+Se desideri visualizzare anche i container che non sono in esecuzione (stati "stopped" o "exited"), puoi utilizzare l'opzione `-a` (o `--all`):
+
+```bash
+docker ps -a
+```
+
+Inoltre, ci sono altre opzioni che puoi utilizzare con `docker ps`, come:
+
+- `-q`: Mostra solo gli ID dei container.
+- `--filter`: Filtra i risultati in base a criteri specifici.
+
+
+
+
