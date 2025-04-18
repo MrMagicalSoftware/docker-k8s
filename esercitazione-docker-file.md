@@ -27,11 +27,12 @@ app.listen(port, () => {
     console.log(`App listening at http://localhost:${port}`);
 });
 
+```
 
 Passo 3:
 Creare un file package.json:
 Crea un file chiamato package.json con il seguente contenuto:
-```
+
 
 
 ```
