@@ -169,7 +169,6 @@ ___________________________________________________
 | `docker-compose up`   | Avvia i servizi definiti in un file `docker-compose.yml`.                                     | `docker-compose up` <br> (Avvia i servizi definiti nel file `docker-compose.yml`)        |
 | `docker-compose down` | Ferma e rimuove i container, le reti e i volumi definiti in un file `docker-compose.yml`.     | `docker-compose down` <br> (Ferma e rimuove i servizi definiti nel file `docker-compose.yml`) |
 
-Questa tabella fornisce una panoramica dei comandi più comuni utilizzati in Docker, insieme a esempi pratici per ciascuno di essi.
 
 
 
