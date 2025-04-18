@@ -1,8 +1,6 @@
 # docker-k8s
 
-## titolo2
 
-### titolo3
 
 
 # Installare Docker su Ubuntu Server
