@@ -32,6 +32,9 @@ Passo 3:
 Creare un file package.json:
 Crea un file chiamato package.json con il seguente contenuto:
 ```
+
+
+```
 {
   "name": "hello-docker",
   "version": "1.0.0",
