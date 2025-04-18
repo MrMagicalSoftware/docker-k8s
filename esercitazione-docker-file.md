@@ -6,10 +6,10 @@
 Passo 1 :
 Creare la struttura del progetto
 
-
+```
 mkdir hello-docker
 cd hello-docker
-
+```
 Passo 2 :
 Creare l'applicazione Node.js:
 Crea un file chiamato app.js con il seguente contenuto:
