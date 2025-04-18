@@ -84,7 +84,7 @@ CMD ["npm", "start"]
 
 Costruire l'immagine Docker:
 ```
-docker build -t hello-docker .
+sudo docker build -t hello-docker .
 ```
 
 
@@ -93,7 +93,7 @@ Esegui il container con il seguente comando:
 bash
 
 ```
-docker run -p 3000:3000 hello-docker
+sudo docker run -p 3000:3000 hello-docker
 ```
 
 Testare l'applicazione:
