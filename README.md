@@ -46,6 +46,32 @@ sudo docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -
 
 
 
+# Portainer: How to Fix “Unable to retrieve image details”
+
+I cannot access container’s console in Portainer. When click Console link, it showed error message “Unable to retrieve image details”.
+To fix this, I remove Portainer image and pull again with portainer/portainer-ce:sts image.
+
+Use the following commands to stop then remove the current Portainer. Your other applications/containers will not be removed.
+
+
+```
+sudo docker stop portainer
+```
+
+```
+sudo docker rm portainer
+```
+
+```
+sudo docker pull portainer/portainer-ce:sts
+```
+
+```
+docker run -d -p 9000:9000 -p 9443:9443 –name=portainer –restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:sts
+```
+
+______________
+
 Docker è un programma per la gestione dei container
 
 ![Screenshot 2025-04-17 alle 11 53 53](https://github.com/user-attachments/assets/3ff60ecb-e294-44a7-8bc9-c0e94358c8c5)
