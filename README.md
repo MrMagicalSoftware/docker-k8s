@@ -123,6 +123,62 @@ Le Environment Variables (variabili d'ambiente) in Docker sono utilizzate per co
 
 
 
+___________________________________________________
+
+
+# Principali comandi Docker
+
+
+| Comando                | Significato                                                                                     |
+|-----------------------|------------------------------------------------------------------------------------------------|
+| `docker run`          | Crea ed esegue un container da un'immagine specificata.                                       |
+| `docker ps`           | Elenca i container in esecuzione.                                                             |
+| `docker ps -a`        | Elenca tutti i container, inclusi quelli non in esecuzione.                                   |
+| `docker images`       | Mostra tutte le immagini disponibili localmente.                                             |
+| `docker rmi`          | Rimuove un'immagine specificata.                                                               |
+| `docker rm`           | Rimuove uno o più container.                                                                    |
+| `docker exec`         | Esegue un comando all'interno di un container in esecuzione.                                   |
+| `docker logs`         | Mostra i log di un container specificato.                                                      |
+| `docker build`        | Costruisce un'immagine a partire da un Dockerfile.                                            |
+| `docker pull`         | Scarica un'immagine da un registry (es. Docker Hub).                                          |
+| `docker push`         | Carica un'immagine in un registry.                                                             |
+| `docker network`      | Gestisce le reti Docker.                                                                        |
+| `docker volume`       | Gestisce i volumi Docker per la persistenza dei dati.                                          |
+| `docker-compose up`    | Avvia i servizi definiti in un file `docker-compose.yml`.                                     |
+| `docker-compose down`  | Ferma e rimuove i container, le reti e i volumi definiti in un file `docker-compose.yml`.     |
+
+
+## Esempio di utilizzo
+
+
+| Comando                | Significato                                                                                     | Esempio                                                                                     |
+|-----------------------|------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|
+| `docker run`          | Crea ed esegue un container da un'immagine specificata.                                       | `docker run -d -p 80:80 nginx` <br> (Esegue un container Nginx in background sulla porta 80) |
+| `docker ps`           | Elenca i container in esecuzione.                                                             | `docker ps` <br> (Mostra i container attivi)                                               |
+| `docker ps -a`        | Elenca tutti i container, inclusi quelli non in esecuzione.                                   | `docker ps -a` <br> (Mostra tutti i container, attivi e non)                              |
+| `docker images`       | Mostra tutte le immagini disponibili localmente.                                             | `docker images` <br> (Elenca tutte le immagini scaricate)                                 |
+| `docker rmi`          | Rimuove un'immagine specificata.                                                               | `docker rmi nginx` <br> (Rimuove l'immagine Nginx)                                        |
+| `docker rm`           | Rimuove uno o più container.                                                                    | `docker rm my_container` <br> (Rimuove il container chiamato "my_container")              |
+| `docker exec`         | Esegue un comando all'interno di un container in esecuzione.                                   | `docker exec -it my_container /bin/bash` <br> (Apre una shell bash nel container "my_container") |
+| `docker logs`         | Mostra i log di un container specificato.                                                      | `docker logs my_container` <br> (Mostra i log del container "my_container")               |
+| `docker build`        | Costruisce un'immagine a partire da un Dockerfile.                                            | `docker build -t my_image .` <br> (Costruisce un'immagine chiamata "my_image" dalla directory corrente) |
+| `docker pull`         | Scarica un'immagine da un registry (es. Docker Hub).                                          | `docker pull ubuntu` <br> (Scarica l'immagine Ubuntu dal Docker Hub)                      |
+| `docker push`         | Carica un'immagine in un registry.                                                             | `docker push my_image` <br> (Carica l'immagine "my_image" nel registry configurato)      |
+| `docker network`      | Gestisce le reti Docker.                                                                        | `docker network create my_network` <br> (Crea una rete chiamata "my_network")            |
+| `docker volume`       | Gestisce i volumi Docker per la persistenza dei dati.                                          | `docker volume create my_volume` <br> (Crea un volume chiamato "my_volume")              |
+| `docker-compose up`   | Avvia i servizi definiti in un file `docker-compose.yml`.                                     | `docker-compose up` <br> (Avvia i servizi definiti nel file `docker-compose.yml`)        |
+| `docker-compose down` | Ferma e rimuove i container, le reti e i volumi definiti in un file `docker-compose.yml`.     | `docker-compose down` <br> (Ferma e rimuove i servizi definiti nel file `docker-compose.yml`) |
+
+Questa tabella fornisce una panoramica dei comandi più comuni utilizzati in Docker, insieme a esempi pratici per ciascuno di essi.
+
+
+
+
+
+
+
+
+
 
 
 
