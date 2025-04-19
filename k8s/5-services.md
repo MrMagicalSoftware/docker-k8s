@@ -107,6 +107,136 @@ Dopo aver applicato questa configurazione, puoi accedere al servizio utilizzando
 I Service in Kubernetes sono essenziali per gestire la comunicazione tra i Pod e per esporre le applicazioni in esecuzione nel cluster. Offrono un modo semplice e robusto per accedere alle applicazioni, bilanciare il carico e garantire la disponibilità. Utilizzando i diversi tipi di Service, puoi adattare l'accesso
 
  
+______________________________________________________________________________________________________
+
+
+
+
+## ESEMPIO CLUSTERIP
+
+
+
+### Passo 1: Creare un Deployment
+
+ creiamo un Deployment che esegue un server Nginx. Creiamo un file chiamato `deployment.yaml` con il seguente contenuto:
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+spec:
+  replicas: 3  # Numero di repliche desiderate
+  selector:
+    matchLabels:
+      app: nginx  # Etichetta per selezionare i Pod
+  template:
+    metadata:
+      labels:
+        app: nginx  # Etichetta per i Pod
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:latest  # Immagine del container
+        ports:
+        - containerPort: 80  # Porta esposta dal container
+```
+
+### Spiegazione del Deployment
+
+- **apiVersion:** Specifica la versione dell'API Kubernetes da utilizzare.
+- **kind:** Indica che stiamo creando un Deployment.
+- **metadata:** Contiene informazioni sul Deployment, come il nome.
+- **spec:** Definisce le specifiche del Deployment.
+  - **replicas:** Indica il numero di repliche di Pod da mantenere.
+  - **selector:** Specifica le etichette per selezionare i Pod gestiti dal Deployment.
+  - **template:** Definisce il modello per i Pod creati dal Deployment.
+    - **metadata:** Contiene le etichette per i Pod.
+    - **spec:** Specifica i container da eseguire nei Pod.
+
+### Passo 2: Applicare il Deployment
+
+Per creare il Deployment nel cluster
+
+```bash
+kubectl apply -f deployment.yaml
+```
+
+### Passo 3: Creare un Service di Tipo ClusterIP
+
+creiamo un Service di tipo ClusterIP per esporre il nostro Deployment. Creiamo un file chiamato `service.yaml` con il seguente contenuto:
+
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service
+spec:
+  selector:
+    app: nginx  # Deve corrispondere alle etichette dei Pod
+  ports:
+    - protocol: TCP
+      port: 80        # Porta del Service
+      targetPort: 80  # Porta del Pod
+  type: ClusterIP    # Tipo di Service
+```
+
+### Spiegazione del Service
+
+- **apiVersion:** Specifica la versione dell'API Kubernetes da utilizzare.
+- **kind:** Indica che stiamo creando un Service.
+- **metadata:** Contiene informazioni sul Service, come il nome.
+- **spec:** Definisce le specifiche del Service.
+  - **selector:** Specifica le etichette per selezionare i Pod a cui il Service deve inviare il traffico.
+  - **ports:** Definisce le porte del Service.
+    - **protocol:** Protocollo utilizzato (TCP in questo caso).
+    - **port:** Porta su cui il Service è esposto (80).
+    - **targetPort:** Porta del Pod a cui il traffico deve essere inviato (80).
+  - **type:** Specifica il tipo di Service. In questo caso, è `ClusterIP`, il che significa che il Service sarà accessibile solo all'interno del cluster.
+
+### Passo 4: Applicare il Service
+
+Per creare il Service nel cluster
+
+
+```bash
+kubectl apply -f service.yaml
+```
+
+### Passo 5: Verificare il Deployment e il Service
+
+verificare che il Deployment e il Service siano stati creati correttamente eseguendo i seguenti comandi:
+
+```bash
+kubectl get deployments
+kubectl get services
+```
+
+L'output dovrebbe mostrare il Deployment e il Service creati:
+
+```
+NAME                READY   UP-TO-DATE   AVAILABLE   AGE
+nginx-deployment    3/3     3            3           1m
+
+NAME            TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)    AGE
+nginx-service   ClusterIP   10.96.0.1      <none>        80/TCP     1m
+```
+
+### Passo 6: Accedere al Service
+
+Poiché il Service è di tipo **ClusterIP**, sarà accessibile solo all'interno del cluster. 
+si può accedere al Service da un altro Pod nel cluster. Per farlo, puoi eseguire un Pod temporaneo e utilizzare `curl` per testare il Service.
+
+
+
+
+
+
+
+
+
+
+
 
 
 
