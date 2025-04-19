@@ -152,10 +152,17 @@ Il comando kubectl get rs è utilizzato per elencare i ReplicaSet (abbreviato co
 _________________________________________________________________________
 
 
+![Screenshot 2025-04-19 alle 11 43 50](https://github.com/user-attachments/assets/bc0baea8-1a7d-4ada-a08b-d4739d9eb36d)
 
 
+![Screenshot 2025-04-19 alle 11 46 43](https://github.com/user-attachments/assets/29e0dbe9-eaeb-44dc-ad8c-c8b6e4338ca1)
 
+![Screenshot 2025-04-19 alle 11 48 50](https://github.com/user-attachments/assets/09b2da04-8758-4f0d-afc7-05d1962bf573)
 
+![Screenshot 2025-04-19 alle 11 49 37](https://github.com/user-attachments/assets/da7d5436-6d7f-4fb8-ae1c-33bbcb6c2990)
+![Screenshot 2025-04-19 alle 11 49 55](https://github.com/user-attachments/assets/da3c440e-8d9c-4fcd-a7cd-ba1d0b998955)
+![Screenshot 2025-04-19 alle 11 50 20](https://github.com/user-attachments/assets/b0333653-71bd-4286-9d97-ed976c298d68)
+![Screenshot 2025-04-19 alle 11 50 40](https://github.com/user-attachments/assets/06ea4274-5c4a-4efa-9f43-bd07c11ecc08)
 
 
 
