@@ -7,7 +7,7 @@
 
 
 
-La gestione degli oggetti in Kubernetes (K8s) è un aspetto fondamentale per il funzionamento e l'amministrazione delle applicazioni containerizzate. Kubernetes utilizza vari tipi di oggetti per rappresentare e gestire le risorse nel cluster. Ecco una panoramica dei principali oggetti di Kubernetes e delle pratiche di gestione associati.
+La gestione degli oggetti in Kubernetes (K8s) è un aspetto fondamentale per il funzionamento e l'amministrazione delle applicazioni containerizzate. Kubernetes utilizza vari tipi di oggetti per rappresentare e gestire le risorse nel cluster. 
 
 ### Tipi di Oggetti Kubernetes
 
