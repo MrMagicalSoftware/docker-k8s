@@ -412,6 +412,7 @@ Dove `<file.yaml>` è il percorso del file di configurazione che contiene il man
 
 
 
+![Uploading Screenshot 2025-04-19 alle 10.46.01.png…]()
 
 
 
