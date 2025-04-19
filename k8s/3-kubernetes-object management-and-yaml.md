@@ -244,12 +244,24 @@ _________________________________
 
 
 
-
+# ESERCITAZIONE
 
 <img width="1482" alt="Screenshot 2025-04-19 alle 10 10 28" src="https://github.com/user-attachments/assets/a192aee9-6c1d-42a7-b853-a8cc027feb88" />
 
 
 
+```
+kubectl create -f nginx-pod.yaml
+```
+
+Vedremo che ha creato un nuovo pod :
+
+```
+kubectl get pods
+kubectl describe pod nginx-pod
+```
+
+Proseguiamo la nostra esercitazione e creami un file di configurazione service
 
 
 
