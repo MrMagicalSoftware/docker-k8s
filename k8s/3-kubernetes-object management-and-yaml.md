@@ -278,3 +278,82 @@ Proseguiamo la nostra esercitazione e creami un file di configurazione service
 <img width="1486" alt="Screenshot 2025-04-19 alle 10 22 13" src="https://github.com/user-attachments/assets/9121ed19-eb1d-4aad-a100-74c70c1b2b65" />
 
 
+```
+kubectl create -f nginx-svc.yaml
+kubectl get services
+```
+
+<img width="1461" alt="Screenshot 2025-04-19 alle 10 26 50" src="https://github.com/user-attachments/assets/1faffa52-f1d9-4744-89cd-9360b3782720" />
+
+
+__________________________________
+
+
+
+## Hands-On Generating Kubernetes Manifests with kubectl
+
+I manifesti sono file di configurazione in formato YAML o JSON che definiscono le risorse da creare e gestire nel cluster.
+
+### Spiegazione
+
+1. **Cosa sono i manifesti Kubernetes?**
+   - I manifesti sono file che descrivono le risorse Kubernetes, come Pod, Service, Deployment, ConfigMap, ecc. Questi file contengono tutte le informazioni necessarie per creare e gestire le risorse nel cluster.
+
+2. **Utilizzo di `kubectl` per generare manifesti:**
+   - `kubectl` offre comandi per generare manifesti a partire da risorse esistenti o per creare nuovi manifesti da zero.
+
+### Esempi
+
+1. **Generare un manifesto per un Pod:**
+   Puoi generare un manifesto per un Pod utilizzando il comando `kubectl run`. Ad esempio:
+   ```bash
+   kubectl run my-pod --image=nginx --dry-run=client -o yaml
+   ```
+   Questo comando crea un manifesto YAML per un Pod chiamato `my-pod` che utilizza l'immagine `nginx`, senza effettivamente creare il Pod (`--dry-run=client`).
+
+2. **Generare un manifesto per un Deployment:**
+   Puoi generare un manifesto per un Deployment con il comando `kubectl create deployment`. Ad esempio:
+   ```bash
+   kubectl create deployment my-deployment --image=nginx --dry-run=client -o yaml
+   ```
+   Questo comando genera un manifesto YAML per un Deployment chiamato `my-deployment`.
+
+3. **Generare un manifesto per un Service:**
+   Puoi generare un manifesto per un Service utilizzando il comando `kubectl expose`. Ad esempio:
+   ```bash
+   kubectl expose deployment my-deployment --port=80 --target-port=80 --type=LoadBalancer --dry-run=client -o yaml
+   ```
+   Questo comando crea un manifesto YAML per un Service che espone il Deployment `my-deployment`.
+
+4. **Modificare un manifesto esistente:**
+   Se hai già un manifesto YAML e desideri modificarlo, puoi utilizzare `kubectl edit`. Ad esempio:
+   ```bash
+   kubectl edit deployment my-deployment
+   ```
+   Questo comando apre il manifesto del Deployment in un editor di testo, consentendoti di apportare modifiche.
+
+5. **Salvare un manifesto esistente:**
+   Puoi anche esportare un manifesto esistente in un file YAML utilizzando il comando `kubectl get`. Ad esempio:
+   ```bash
+   kubectl get deployment my-deployment -o yaml > my-deployment.yaml
+   ```
+   Questo comando salva il manifesto del Deployment `my-deployment` in un file chiamato `my-deployment.yaml`.
+
+6. **Creare un ConfigMap:**
+   Puoi generare un ConfigMap utilizzando il comando `kubectl create configmap`. Ad esempio:
+   ```bash
+   kubectl create configmap my-config --from-literal=key1=value1 --dry-run=client -o yaml
+   ```
+   Questo comando genera un manifesto YAML per un ConfigMap chiamato `my-config` con una chiave `key1` e valore `value1`.
+
+
+________________
+
+
+
+
+
+
+
+
+
