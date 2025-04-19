@@ -246,7 +246,7 @@ _________________________________
 
 
 
-4- Hands -on
+<img width="1482" alt="Screenshot 2025-04-19 alle 10 10 28" src="https://github.com/user-attachments/assets/a192aee9-6c1d-42a7-b853-a8cc027feb88" />
 
 
 
