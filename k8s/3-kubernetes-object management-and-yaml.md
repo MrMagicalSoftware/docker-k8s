@@ -411,8 +411,8 @@ Dove `<file.yaml>` è il percorso del file di configurazione che contiene il man
 
 
 
+<img width="1478" alt="Screenshot 2025-04-19 alle 10 46 01" src="https://github.com/user-attachments/assets/0843495d-b90c-4758-8462-3db36031a8e0" />
 
-![Uploading Screenshot 2025-04-19 alle 10.46.01.png…]()
 
 
 
