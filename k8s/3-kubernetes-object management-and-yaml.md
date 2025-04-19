@@ -273,6 +273,8 @@ Proseguiamo la nostra esercitazione e creami un file di configurazione service
 
 
 
+<img width="1488" alt="Screenshot 2025-04-19 alle 10 21 43" src="https://github.com/user-attachments/assets/c307d83d-639f-40a7-9f36-7b461b8a1c7c" />
 
+<img width="1486" alt="Screenshot 2025-04-19 alle 10 22 13" src="https://github.com/user-attachments/assets/9121ed19-eb1d-4aad-a100-74c70c1b2b65" />
 
 
