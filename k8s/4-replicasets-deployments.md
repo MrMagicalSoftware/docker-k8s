@@ -165,6 +165,166 @@ _________________________________________________________________________
 ![Screenshot 2025-04-19 alle 11 50 40](https://github.com/user-attachments/assets/06ea4274-5c4a-4efa-9f43-bd07c11ecc08)
 
 
+___________________________________________
+
+
+# Hands on creating and managing Deployments
+
+
+
+Creare e gestire i **Deployment** in Kubernetes è un'attività fondamentale per garantire che le applicazioni siano scalabili, aggiornabili e resilienti. Di seguito, ti fornirò una guida pratica su come creare e gestire i Deployment utilizzando `kubectl`.
+
+### 1. Creazione di un Deployment
+
+#### Passo 1: Creare un Manifesto YAML
+
+Iniziamo creando un file YAML per definire un Deployment. Puoi utilizzare un editor di testo per creare un file chiamato `deployment.yaml` con il seguente contenuto:
+
+```yaml
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: my-app
+  template:
+    metadata:
+      labels:
+        app: my-app
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:latest
+        ports:
+        - containerPort: 80
+```
+
+In questo esempio, stiamo creando un Deployment chiamato `my-deployment` che esegue 3 repliche di un Pod con un container Nginx.
+
+#### Passo 2: Applicare il Manifesto
+
+Per creare il Deployment nel cluster, esegui il seguente comando:
+
+```bash
+kubectl apply -f deployment.yaml
+```
+
+#### Passo 3: Verificare il Deployment
+
+Puoi verificare che il Deployment sia stato creato correttamente eseguendo:
+
+```bash
+kubectl get deployments
+```
+
+Dovresti vedere un output simile a questo:
+
+```
+NAME            READY   UP-TO-DATE   AVAILABLE   AGE
+my-deployment   3/3     3            3           1m
+```
+
+### 2. Aggiornare un Deployment
+
+#### Passo 1: Modificare il Manifesto
+
+Supponiamo di voler aggiornare l'immagine del container a una versione specifica. Modifica il file `deployment.yaml` per cambiare l'immagine:
+
+```yaml
+      containers:
+      - name: nginx
+        image: nginx:1.21.0  # Aggiornato a una versione specifica
+```
+
+#### Passo 2: Applicare le Modifiche
+
+Esegui nuovamente il comando `kubectl apply`:
+
+```bash
+kubectl apply -f deployment.yaml
+```
+
+#### Passo 3: Verificare l'Aggiornamento
+
+Puoi controllare lo stato del Deployment e vedere se l'aggiornamento è stato applicato correttamente:
+
+```bash
+kubectl rollout status deployment/my-deployment
+```
+
+### 3. Rollback di un Deployment
+
+Se l'aggiornamento ha causato problemi, puoi eseguire un rollback al Deployment precedente.
+
+#### Passo 1: Eseguire il Rollback
+
+Per eseguire un rollback, utilizza il comando:
+
+```bash
+kubectl rollout undo deployment/my-deployment
+```
+
+#### Passo 2: Verificare il Rollback
+
+Controlla lo stato del Deployment per assicurarti che sia tornato alla versione precedente:
+
+```bash
+kubectl get deployments
+```
+
+### 4. Scalare un Deployment
+
+Puoi facilmente scalare il numero di repliche di un Deployment.
+
+#### Passo 1: Scalare il Deployment
+
+Per aumentare il numero di repliche a 5, esegui:
+
+```bash
+kubectl scale deployment my-deployment --replicas=5
+```
+
+#### Passo 2: Verificare il Nuovo Numero di Repliche
+
+Controlla il numero di repliche attive:
+
+```bash
+kubectl get deployments
+```
+
+### 5. Eliminare un Deployment
+
+Se desideri eliminare il Deployment, puoi farlo con il seguente comando:
+
+```bash
+kubectl delete deployment my-deployment
+```
+
+
+
+
+
+
+
+
+
+
+
+______________________________________________
+
+
+
+
+
+
+
+
+
+
+
 
 
 
