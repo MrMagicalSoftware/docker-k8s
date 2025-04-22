@@ -3,7 +3,7 @@
 creare una cartella flask-docker-example
 ```
 mkdir flask-docker-example
-cd progetto-python
+cd flask-docker-example
 
 ```
 
