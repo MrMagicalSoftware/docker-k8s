@@ -1,6 +1,6 @@
 # docker-k8s
 
-
+## repository per imparare a utilizzare docker 
 
 
 <img width="933" alt="Screenshot 2025-04-13 alle 18 17 47" src="https://github.com/user-attachments/assets/79601cbd-b308-43db-9cd0-6fc2dd749bd3" />
